@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+<body>
+    <h1>Conversor de Moedas</h1>
+    
+    <input id="input" type="number" placeholder="Digite o valor">
+    
+    <select id="origem">        
+        <option value="real">Real R$</option>
+        <option value="dolar">Dólar $</option>
+    </select>
+
+    <select id="destino">
+        <option value="dolar">Dólar $</option>
+        <option value="real">Real R$</option>
+    </select>
+
+    <button id="botao">Converter</button>
+
+</body>
+<style>
+    body {
+        background-color: #feeeee;
+        max-width: 400px;
+        margin: 50px auto;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    input, button, select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+</style>
+<script>
+    let botao = document.getElementById("botao")
+    let input = document.getElementById("input")
+    let origem = document.getElementById("origem")
+    let destino = document.getElementById("destino")
+
+    botao.addEventListener("click", converter)
+
+    function converter() {
+        
+        if(origem.value === 'real' && destino.value == 'dolar') {
+           alert(input.value / 5.8) 
+        } else if (origem.value == 'dolar' && destino.value == 'real') {
+            alert(input.value * 5.8)
+
+        }
+    }
+
+</script>
+
+</html>
